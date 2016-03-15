@@ -17,6 +17,8 @@
     
     <target name="phpinfo">
         <echo message="${php} -v"/>
-        <exec executable="${php} -v"/>
+        <exec executable="${php}">
+            <arg value="-v"/>
+        </exec>
     </target>
 </project>

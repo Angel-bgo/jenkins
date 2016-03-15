@@ -1,0 +1,22 @@
+<project>
+    <target name="onPush" depends="">
+        <antcall target="phpVersionized"/>		
+    </target>
+
+    <target name="phpVersionized">
+
+        <antcall target="phpinfo">
+            <param name="php" value="php56"/>
+        </antcall>
+        
+        <antcall target="phpinfo">
+            <param name="php" value="php70"/>
+        </antcall>
+
+    </target>
+    
+    <target name="phpinfo">
+        <echo message="${php} -v"/>
+        <exec executable="${php} -v"/>
+    </target>
+</project>

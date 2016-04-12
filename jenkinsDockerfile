@@ -1,4 +1,8 @@
 FROM debian:jessie
     RUN apt-get update
-    RUN apt-get install -y curl php5 rsync git curl
-    RUN curl https://getcomposer.org/composer.phar > /bin/composer && chmod +x /bin/composer
+    apt-get install -y apt-transport-https ca-certificates && \
+    echo "\ndeb https://apt.dockerproject.org/repo debian-jessie main" >> /etc/apt/sources.list && \
+    apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
+    apt-cache policy docker-engine && \
+    apt-get update && \
+    apt-get install -y docker-engine

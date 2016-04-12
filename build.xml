@@ -1,5 +1,17 @@
 <project>
     <target name="onPush" depends="">
+        
+         <exec executable="docker">
+            <arg value="run"/>
+            <arg value="-v"/>
+            <arg value="&quot;$PWD&quot;:/var/www"/>
+            <arg value="-i"/>
+            <arg value="php:7.0-cli"/>
+            <arg value="php"/>
+            <arg value="/var/www/a.php"/>
+        </exec>
+        
+        
         <antcall target="phpVersionized"/>		
     </target>
 

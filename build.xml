@@ -6,19 +6,18 @@
     <target name="phpVersionized">
 
         <antcall target="phpinfo">
-            <param name="php" value="php56"/>
+            <param name="php" value='docker run -v "$PWD":/var/www -i php:7.0-cli php'/>
         </antcall>
         
         <antcall target="phpinfo">
-            <param name="php" value="php70"/>
+            <param name="php" value='docker run -v "$PWD":/var/www -i php:5.6-cli php'/>
         </antcall>
 
     </target>
     
     <target name="phpinfo">
-        <echo message="${php} -v"/>
         <exec executable="${php}">
-            <arg value="-v"/>
+            <arg value="/var/www/a.php"/>
         </exec>
     </target>
 </project>

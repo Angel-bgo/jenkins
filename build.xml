@@ -4,7 +4,7 @@
          <exec executable="docker">
             <arg value="run"/>
             <arg value="-v"/>
-            <arg value="$PWD:/var/www"/>
+            <arg value="${basedir}:/var/www"/>
             <arg value="-i"/>
             <arg value="php:7.0-cli"/>
             <arg value="php"/>

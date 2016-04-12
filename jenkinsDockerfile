@@ -1,0 +1,4 @@
+FROM debian:jessie
+    RUN apt-get update
+    RUN apt-get install -y curl php5 rsync git curl
+    RUN curl https://getcomposer.org/composer.phar > /bin/composer && chmod +x /bin/composer

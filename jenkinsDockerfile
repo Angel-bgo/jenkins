@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
 RUN apt-get -y update && apt-get -y install wget
-RUN wget https://get.docker.com/builds/Linux/x86_64/docker-latest
-RUN chmod 770 docker-latest
+RUN wget https://get.docker.com/builds/Linux/x86_64/docker-latest > /bin/docker
+RUN chmod 770 /bin/docker
 

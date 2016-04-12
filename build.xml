@@ -18,6 +18,15 @@
     <target name="phpVersionized">
 
         <antcall target="phpinfo">
+            <exec executable="docker">
+                <arg value="run"/>
+                <arg value="-v"/>
+                <arg value="${basedir}:/var/www"/>
+                <arg value="-i"/>
+                <arg value="php:7.0-cli"/>
+                <arg value="php"/>
+                <arg value="/var/www/a.php"/>
+            </exec>
             <param name="php" value="docker run -v ${basedir}:/var/www -i php:7.0-cli php "/>
         </antcall>
         
@@ -29,7 +38,7 @@
     
     <target name="phpinfo">
         <exec executable="${php}">
-            <arg value="/var/www/a.php"/>
+            <arg value=" /var/www/a.php"/>
         </exec>
     </target>
 </project>

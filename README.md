@@ -29,3 +29,9 @@ usermod -a -G docker jenkins
 ```
 reboot :)
 
+## Jenkins setup
+
+`Jenkins -> Manage Jenkins -> Manage Plugins`
+Install following plugins:
+* [Git plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin])
+* [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin)

@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:jessie
 
 RUN apt-get -y update && apt-get -y install wget && \
     apt-get -y install apt-transport-https ca-certificates && \

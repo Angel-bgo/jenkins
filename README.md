@@ -45,3 +45,9 @@ Install following plugins:
 Path on host: /var/run/docker.sock
 Path inside container: /var/run/docker.sock
 ```
+
+Example shell build step
+```
+docker run -v ${PWD}:/project -i php:7.0-cli php /project/examples/simplePhp.php && \
+docker run -v ${PWD}:/project -i php:5.6-cli php /project/examples/simplePhp.php
+```

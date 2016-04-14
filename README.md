@@ -37,5 +37,11 @@ Install following plugins:
 * [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin)
 
 ## New project setup
-* Make sure `Build inside a Docker container` is checked.
-* Make sure `Run in privileged mode` is checked
+* check `Build inside a Docker container`
+* check `Run in privileged mode`
+* User group should be `docker`
+* Add volume. Container will use docker from host.
+```
+Path on host: /var/run/docker.sock
+Path inside container: /var/run/docker.sock
+```

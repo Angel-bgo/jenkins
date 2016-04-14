@@ -35,3 +35,7 @@ reboot :)
 Install following plugins:
 * [Git plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin])
 * [CloudBees Docker Custom Build Environment Plugin](https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Custom+Build+Environment+Plugin)
+
+## New project setup
+* Make sure `Build inside a Docker container` is checked.
+* Make sure `Run in privileged mode` is checked

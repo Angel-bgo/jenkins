@@ -1,4 +1,4 @@
-# Jenkins running build in conainer
+# Jenkins running builds in containers
 
 ## Installation
 

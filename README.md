@@ -65,7 +65,7 @@ docker run -v ${PWD}:/project -i php:5.6-cli php /project/examples/simplePhp.php
 * Authorization:  Matrix-based security	
 * add you user (admin). Give all permissions to your user. Remove all permission from `Anonymous`
 * uncheck `Allow users to sign up`
-* In project configuration (Jenkins->Project1->Configure) create Build Triggers -> Trigger builds remotely -> Enter Authentication Token	(e.g. mySicretToken13 )
+* In project configuration (Jenkins->Project1->Configure) create Build Triggers -> Trigger builds remotely -> Enter Authentication Token	(e.g. mySecretToken13 )
 Build could br triggered from url
 ```
 curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=PROJECTNAME&token=TOKEN'

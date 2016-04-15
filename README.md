@@ -38,6 +38,7 @@ Install following plugins:
 
 ## New project setup
 * make sure `Build inside a Docker container` is checked
+* Docker image from repository: `bgosoftware/cidocker:1`
 * make sure `Run in privileged mode` is checked
 * User group should be `docker`
 * Add volume. Container will use docker from host.

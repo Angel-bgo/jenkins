@@ -51,3 +51,24 @@ Example shell build step
 docker run -v ${PWD}:/project -i php:7.0-cli php /project/examples/simplePhp.php && \
 docker run -v ${PWD}:/project -i php:5.6-cli php /project/examples/simplePhp.php
 ```
+
+## Security
+* Install `Build Authorization Token Root Plugin` (Build Token Root Plugin)
+* Manage Jenkins -> Configure Global Security
+* Check `Enable security`
+* Security Realm: Jenkins’ own user database
+* check `Allow users to sign up`
+* Authorization: `Anyone can do anything`
+* Save.
+* Register new account (top-right corener) - http://jenkins.local:8080/signup
+* Manage Jenkins -> Configure Global Security
+* Authorization:  Matrix-based security	
+* add you user (admin). Give all permissions to your user. Remove all permission from `Anonymous`
+* uncheck `Allow users to sign up`
+* In project configuration (Jenkins->Project1->Configure) create Build Triggers -> Trigger builds remotely -> Enter Authentication Token	(e.g. mySicretToken13 )
+Build could br triggered from url
+```
+curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=PROJECTNAME&token=TOKEN'
+example:
+curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=project1&token=mySicretToken13'
+```

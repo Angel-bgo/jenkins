@@ -6,6 +6,4 @@ apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E8
 echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list && \
 apt-get update && apt-cache policy docker-engine && \
 apt-get install -y docker-engine docker && \
-apt-get install -y ant && \
-echo "\nDOCKER_CONFIG='/tmp/docker" >> /etc/profile
-
+apt-get install -y ant

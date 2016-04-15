@@ -70,5 +70,5 @@ Build could br triggered from url
 ```
 curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=PROJECTNAME&token=TOKEN'
 example:
-curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=project1&token=mySicretToken13'
+curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=project1&token=mySecretToken13'
 ```

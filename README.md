@@ -73,3 +73,10 @@ curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=PROJECTNAME&token
 example:
 curl -XPOST 'http://192.168.11.163:8080/buildByToken/build?job=project1&token=mySecretToken13'
 ```
+
+## Mail configuration
+```
+Manage Jenkins -> Configure System ->
+                              -> System Admin e-mail address -> [enter mail used by jenkins]
+                              -> E-mail Notification -> Fill all required fields (including Advanved)
+

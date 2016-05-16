@@ -30,7 +30,7 @@ usermod -a -G docker jenkins
 reboot :)
 
 ## Backup & Restore
-* [beckup](https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins)
+* [beckup](https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins) - example [script](scripts/backup.sh)
 * [restore](https://documentation.cloudbees.com/docs/cje-user-guide/backup-sect-restore.html)
 
 ## Jenkins setup
